@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 end_date = datetime.now()
 start_date = end_date - timedelta(days=730)  # ~2 years
 
-data = yf.download('NVDA', start=start_date, end=end_date)  # Replace AAPL with any S&P 500 ticker
+data = yf.download('NVDA', start=start_date, end=end_date)  # Nvidia ticker
 data.to_csv('nvda_2years.csv')
 print(data.head())
 
