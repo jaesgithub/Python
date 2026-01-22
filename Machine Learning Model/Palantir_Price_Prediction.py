@@ -5,8 +5,8 @@ from datetime import datetime, timedelta
 end_date = datetime.now()
 start_date = end_date - timedelta(days=730)  # ~2 years
 
-data = yf.download('NVDA', start=start_date, end=end_date)  # Nvidia ticker
-data.to_csv('nvda_2years.csv')
+data = yf.download('PLTR', start=start_date, end=end_date)  # Nvidia ticker
+data.to_csv('pltr_2years.csv')
 print(data.head())
 
 # Calculate technical indicators and features
@@ -85,10 +85,10 @@ plt.plot(test_dates, y_test.values, label='Actual Price', linewidth=2)
 plt.plot(test_dates, y_pred_test, label='Predicted Price', linewidth=2, alpha=0.7)
 plt.xlabel('Date')
 plt.ylabel('Stock Price ($)')
-plt.title('NVDA Stock Price: Actual vs Predicted')
+plt.title('PLTR Stock Price: Actual vs Predicted')
 plt.legend()
 plt.grid(True)
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig('nvda_prediction.png')
+plt.savefig('pltr_prediction.png')
 plt.show()
